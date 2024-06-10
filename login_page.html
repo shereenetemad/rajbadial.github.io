@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Rajvir's Website - Project 1</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Arial, Helvetica, sans-serif sans-serif;
+    margin: 0;
+    align-items: center;
+}
+
+.header {
+    padding: 10px;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: whitesmoke;
+    padding-right: 40px;
+    padding-left: 40px;
+    width: 100%;
+    padding-top: 20px;
+}
+
+.navbar a {
+  float: right;
+  color:black;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 10px;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar a:hover {
+  background-color: darkgrey;
+  color: black;
+  height: 30px;
+}
+
+.navbar h1 {
+    text-align: left;
+    font-size: 20px;
+}
+
+.navbar p {
+    text-align: left;
+    font-size: 10px;
+    color: gray;
+    white-space: pre-line;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: center;
+    align-items: center;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    display: block;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.login-button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #218838;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+}
+
+
+
+</style>
+</head>
+<body>
+
+<div class="navbar">
+  <a href="booking_page.html" class="right">Book A Haircut</a>
+  <a href="index.html#meet-the-team" class="right">Meet The Team</a>
+  <a href="login_page.html" class="right">Log In</a>
+  <h1>Toor Cuts</h1>
+  <p>Open from 8:00 am to 9:00 pm
+    238 Madagascar Ave.
+    K2W 3H9
+  </p>
+</div>
+
+<div class="header">
+    <div class="container-fluid" style="overflow: hidden; max-height: 10%; width: 100%; padding: 20px; padding-top: 100px;">
+        <img src="assets/landingimage2.png" alt="Toor Cuts Logo" style="width: 25%; display: block;
+        margin-left: auto; margin-right: auto;" class="img-fluid">
+    </div>
+</div>
+
+<div class="body">
+    <h1 style="text-align: center;">Login</h1>
+    <script>
+        function redirectToHomePage() {
+            // Redirect to the home page (index.html)
+            var username = document.getElementById('username').value;
+            window.location.href = "index.html?username=" + encodeURIComponent(username);
+        }
+    </script>
+    <form class="login-form" onsubmit="redirectToHomePage(document.getElementById('username').value); return false;">
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <button type="submit" class="login-button">Login</button>
+    </form>
+</div>
+
+
+
+
+<div class="footer">
+    <hr>
+    <img src="assets/footer.png" alt="See us at 238 Madagascar Ave. or contact us at (613) 222-3333"
+    style="height: 150px;">
+</div>
+
+</body>
+</html>

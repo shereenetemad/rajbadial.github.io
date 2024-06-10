@@ -22,52 +22,251 @@ body {
 
 .navbar {
     overflow: hidden;
-    background-color: white;
+    background-color: whitesmoke;
+    padding-right: 40px;
+    padding-left: 40px;
+    width: 100%;
+    padding-top: 20px;
+    position: fixed;
+    top: 0;
+    z-index: 1;
 }
 
 .navbar a {
-  float: left;
-  display: block;
-  color: black;
-  text-align: center;
-  padding: 14px 20px;
-  text-decoration: none;
-}
-
-/* Right-aligned link */
-.navbar a.right {
   float: right;
+  color:black;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 10px;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }
 
 .navbar a:hover {
   background-color: darkgrey;
   color: black;
+  height: 30px;
 }
 
 .navbar h1 {
+    text-align: left;
     font-size: 20px;
 }
 
 .navbar p {
-    font-size: 5px;
+    text-align: left;
+    font-size: 10px;
+    color: gray;
+    white-space: pre-line;
 }
+
+.about_section {
+    overflow: hidden;
+}
+
+.about_section_text {
+    float: left;
+    width: 32%;
+    margin-left: 250px;
+    margin-top: 70px;
+    padding-left: 175px;
+    font-size: 13.5px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.about_section_image {
+    max-height: 10%;
+    display: block;
+}
+
+.services_prices {
+    overflow: hidden;
+    padding-top: 100px;
+}
+
+.services_prices_text {
+    float: right;
+    width: 32%;
+    margin-right: 200px;
+    margin-top: 80px;
+}
+
+.services_prices_image {
+    max-height: 10%;
+}
+
+.services_prices_bookbutton a {
+    font: 600;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    float: right;
+    margin-right: 405px;
+    color:white;
+    background-color: black;
+    height: 30px;
+    width: 80px;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 12.5px;
+    text-decoration: none;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.services_prices_bookbutton a:hover {
+    background-color: darkgrey;
+    color: black;
+    height: 30px;
+    padding: 10 20px;
+}
+
+.gallery {
+    display: flex; /* Use flexbox for the gallery layout */
+    justify-content: space-around; /* Distribute space around the items */
+    margin: 50px;
+}
+
+.image-item {
+    text-align: center; /* Center the text and image within each item */
+    margin: 0 10px; /* Add some horizontal margin between items */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-item img {
+    width: 200px; /* Set a specific width for the images */
+    height: 240px; /* Maintain the aspect ratio */
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    object-fit: cover;
+}
+
+.caption {
+    margin-top: 10px; /* Add some space between the image and the text */
+    font-size: 18px; /* Set the font size for the caption */
+    font-weight: 600;
+    color: black;
+}
+
+.body_text {
+    margin-top: 5px; /* Add some space between the image and the text */
+    font-size: 13px; /* Set the font size for the caption */
+    font-weight: 500;
+    color:slategray;
+    width: 50%;
+}
+
+.title {
+    font-size: 32px; /* Set the font size for the title */
+    font-weight: bold; /* Make the title bold */
+    margin: 40px 0; /* Add some margin above and below the title */
+    color: #333; /* Set the color for the title */
+    text-align: center;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+}
+
+
 
 </style>
 </head>
 <body>
 
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    var params = new URLSearchParams(window.location.search);
+    var username = params.get('username');
+    if (username) {
+        document.getElementById('username-display').textContent = "Welcome, " + username + "!";
+    }
+});
+
+</script>
+    
 <div class="navbar">
+  <a href="booking_page.html" class="right">Book A Haircut</a>
+  <a href="index.html#meet-the-team" class="right">Meet The Team</a>
+  <a href="login_page.html" class="right" id="username-display">Log In</a>
   <h1>Toor Cuts</h1>
-  <p>Open from 8:00 am to 9:00 pm</p>
-  <a href="#" class="right">Meet The Team</a>
-  <a href="#" class="right">Contact</a>
-  <a href="#" class="right">Book A Haircut</a>
+  <p>Open from 8:00 am to 9:00 pm
+    238 Madagascar Ave.
+    K2W 3H9
+  </p>
 </div>
 
 <div class="header">
-    <div class="container-fluid" style="overflow: hidden; max-height: 29%; width: auto;">
-        <img src="assets/landingimage.png" alt="Toor Cuts Logo" style="width: 100%;" class="img-fluid">
+    <div class="container-fluid" style="overflow: hidden; max-height: 10%; width: 100%; padding: 20px; padding-top: 100px;">
+        <img src="assets/landingimage2.png" alt="Toor Cuts Logo" style="width: 50%; display: block;
+        margin-left: auto; margin-right: auto;" class="img-fluid">
     </div>
 </div>
+
+<div class="about_section">
+    <div class="about_section_text">
+        <h1>Reinvent Yourself</h1>
+        <p>Put your hair in the hands of our trusted barbers and come out a new person. We don't
+            just provide haircuts, we give you an experience like no other.</p>
+    </div>
+    <div class="about_section_image">
+        <img src="assets/about_section.png" alt="Toor Cuts Logo" style="width: 25%; float: right; 
+        margin-right: 325px; border-radius: 8px;">
+    </div>
+</div>
+
+<div class="services_prices">
+    <div class="services_prices_text">
+        <h1>Services and Prices</h1>
+        <p>Boys Cut (13 & Under) - $25</p>
+        <p>Regular Cut - $35</p>
+        <p>Regular Cut & Beard Trim - $45</p>
+        <div class="services_prices_bookbutton">
+            <a href="booking_page.html" class="right">Book Now</a>
+        </div>
+    </div>
+    <div class="services_prices_image">
+        <img src="assets/services_prices.jpg" alt="Men's Haircuts - Services and Prices" style="width: 25%; float: left; 
+        margin-left: 325px; border-radius: 8px;">
+    </div>
+</div>
+
+<h1 class="title" id="meet-the-team">Meet the Team</h1>
+<div class="gallery">
+    <div class="image-item">
+        <img src="assets/jaylen-brown.png" alt="Barber 1 - Jaylen Brown">
+        <p class="caption">Jaylen Brown</p>
+        <p class="body_text">Grew up in the downtown Ottawa region and always had a passion for cutting hair. 
+            Started from cutting my friends' hair in my parents garage. I have dreams of opening my own barbershop.</p>
+    </div>
+    <div class="image-item">
+        <img src="assets/jr-smith.png" alt="Barber 2 - JR Smith">
+        <p class="caption">JR Smith</p>
+        <p class="body_text">Love being the reason clients leave with a smile and newfound confidence. 
+            I take pride in every haircut I give and guarantee a great experience for all. </p>
+    </div>
+    <div class="image-item">
+        <img src="assets/lebron-james.png" alt="Barber 3 - Al Horford">
+        <p class="caption">Al Horford</p>
+        
+        <p class="body_text">I've been a trusted barber for over 6 years and have never had an unsatisfied customer. 
+            Love working with my hands and meeting new people.</p>
+    </div>
+</div>
+
+<div class="footer">
+    <hr>
+    <img src="assets/footer.png" alt="See us at 238 Madagascar Ave. or contact us at (613) 222-3333"
+    style="height: 200px;">
+</div>
+
 </body>
 </html>
